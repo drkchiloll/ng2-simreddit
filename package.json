@@ -30,7 +30,7 @@
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "concurrently": "^2.0.0",
-    "live-server": "0.8.2",
+    "lite-server": "^2.2.0",
     "typescript": "^1.8.10"
   }
 }
