@@ -28,8 +28,9 @@
     "zone.js": "^0.6.12"
   },
   "devDependencies": {
+    "bootstrap": "^3.3.6",
     "concurrently": "^2.0.0",
     "live-server": "0.8.2",
     "typescript": "^1.8.10"
-    }
+  }
 }
