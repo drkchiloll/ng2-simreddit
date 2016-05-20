@@ -88,7 +88,7 @@ class ArticleComponent {
   selector: 'app',
   template: (
     `
-      <form class='ui large form segment' *ngIf='active'>
+      <form class='ui large form segment'>
         <h3 class='ui header'> Add Link </h3>
 
         <div class='field'>
