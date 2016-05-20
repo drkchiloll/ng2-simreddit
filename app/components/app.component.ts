@@ -88,7 +88,7 @@ class ArticleComponent {
   selector: 'app',
   template: (
     `
-      <form class='ui large form segment'>
+      <form class='ui large form segment' *ngIf='active'>
         <h3 class='ui header'> Add Link </h3>
 
         <div class='field'>
@@ -109,7 +109,7 @@ class ArticleComponent {
 
       <div class='ui grid posts'>
         <app-article
-          *ngFor='let article of articles'
+          *ngFor='let article of sortedArticles()'
           [article]='article'></app-article>
       </div>
     `
@@ -133,5 +133,9 @@ export class AppComponent {
     this.articles.push(new Article(title.value, link.value, 0));
     title.value = '';
     link.value = '';
+  }
+
+  sortedArticles(): Array<Article> {
+    return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   }
 }
